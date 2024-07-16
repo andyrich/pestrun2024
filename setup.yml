@@ -1,4 +1,4 @@
-name: awsenv
+name: gis_py_10
 channels:
 - conda-forge
 dependencies:
