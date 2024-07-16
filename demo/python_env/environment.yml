@@ -1,0 +1,9 @@
+name: testpython
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - geopandas
+  - hdf4
+  - hdf5

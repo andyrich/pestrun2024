@@ -1,0 +1,17 @@
+notification=Never
+universe = vanilla
+log = log/worker_$(Cluster).log
+output = log/worker_$(Cluster)_$(Process).out
+error = log/worker_$(Cluster)_$(Process).err
+executable = worker1.sh
+stream_output = True
+stream_error = True
+arguments = $(Process)
+requirements =((Target.OpSys=="LINUX")  && (Target.Arch=="X86_64"))
+request_memory = 500
+when_to_transfer_output = ON_EXIT
+should_transfer_files = yes
+transfer_output_files = data/outfile$(Process).dat
+transfer_output_remaps = "outfile$(Process).dat = results/outfile$(Process).dat"
+transfer_input_files =data.tar
+queue 1000  

@@ -1,0 +1,15 @@
+notification=Never
+universe = vanilla
+log = log/worker_$(Cluster).log
+output = log/worker_$(Cluster)_$(Process).out
+error = log/worker_$(Cluster)_$(Process).err
+executable = worker_timeout.sh
+stream_output = True
+stream_error = True
+arguments = $(Process)
+requirements =((Target.OpSys=="LINUX")  && (Target.Arch=="X86_64"))
+request_memory = 500
+when_to_transfer_output = ON_EXIT
+should_transfer_files = yes
+transfer_input_files =  cruel_time.py
+queue 5

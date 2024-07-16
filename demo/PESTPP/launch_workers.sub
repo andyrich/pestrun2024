@@ -1,0 +1,23 @@
+notification = Never
+
+# using straightforward HTCondor universe
+universe = vanilla
+
+# map the logs to be able to see screen output
+log = log/worker_$(Cluster).log
+output = log/worker_$(Cluster)_$(Process).out
+error = log/worker_$(Cluster)_$(Process).err
+
+# worker.sh will launch each worker
+executable = worker.sh
+
+# a couple options to make sure the logs get output in real(ish) time
+stream_output = True
+stream_error = True
+should_transfer_files = YES
+
+# all the model files and binaries are in data.tar
+transfer_input_files = data.tar
+
+# adjust below to determine how many workers to start
+queue 150

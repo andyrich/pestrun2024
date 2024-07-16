@@ -1,0 +1,14 @@
+notification=Never
+universe = vanilla
+log = log/worker_$(Cluster).log
+output = log/worker_$(Cluster)_$(Process).out
+error = log/worker_$(Cluster)_$(Process).err
+executable = worker.sh
+stream_output = True
+stream_error = True
+requirements =((Target.OpSys=="LINUX")  && (Target.Arch=="X86_64"))
+when_to_transfer_output = ON_EXIT
+should_transfer_files = yes
+transfer_output_files = ""
+transfer_input_files = runme.py, testpython.tar.gz
+queue 1
