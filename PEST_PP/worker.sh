@@ -1,5 +1,5 @@
 #!/bin/sh
-
+su - ec2-user
 pwd
 
 unzip -q data.zip
