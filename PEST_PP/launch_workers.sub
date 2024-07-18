@@ -16,8 +16,8 @@ stream_output = True
 stream_error = True
 should_transfer_files = YES
 
-# all the model files and binaries are in data.tar
-transfer_input_files = data.tar
+# all the model files and binaries are in data.zip
+transfer_input_files = data.zip
 
 # adjust below to determine how many workers to start
-queue 150
+queue 5
