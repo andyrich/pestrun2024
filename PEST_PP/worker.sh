@@ -13,7 +13,7 @@ echo pwd
 
 cd pestaws
 echo pwd
-pestpp-ies pest_ies.pst /h 172-31-46-122:9701
+pestpp-ies pest_ies.pst /h 172.31.46.122:9701
 
 
 #sudo -u  ec2-user  'conda activate gis_py_10
