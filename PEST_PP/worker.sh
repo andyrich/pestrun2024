@@ -38,8 +38,8 @@ echo "IP Address: $ip_address"
 echo "Location Information: $location_info"
 echo "Disk Usage: $disk_usage"
 
+test_python.sh
 cd pestaws
-echo pwd
 pestpp-ies pest_ies.pst /h 172.31.46.122:9701
 
 
