@@ -8,8 +8,12 @@ source gis_py_10/bin/activate
 export PATH="/gis_py_10/bin:$PATH"
 unzip -q data.zip
 
+echo whoami
+echo pwd
+
 cd pestaws
-pestpp-ies pest_ies.pst /h 172.31.46.122:9701
+echo pwd
+pestpp-ies pest_ies.pst /h 172-31-46-122:9701
 
 
 #sudo -u  ec2-user  'conda activate gis_py_10
