@@ -10,6 +10,7 @@ unzip -q data.zip
 
 cp -f run.sh pestaws/run.sh
 chmod +x pestaws/mf-owhm.nix
+chmod +x pestaws/run.sh
 
 # Get the current date and time
 current_date_time=$(date)
