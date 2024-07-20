@@ -9,6 +9,7 @@ export PATH="/gis_py_10/bin:$PATH"
 unzip -q data.zip
 
 cp -f run.sh pestaws/run.sh
+chmod +x mf-owhm.nix
 
 # Get the current date and time
 current_date_time=$(date)
