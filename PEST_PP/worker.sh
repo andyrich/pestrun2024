@@ -8,6 +8,8 @@ source gis_py_10/bin/activate
 export PATH="/gis_py_10/bin:$PATH"
 unzip -q data.zip
 
+
+
 # Get the current date and time
 current_date_time=$(date)
 
@@ -29,6 +31,9 @@ location_info=$(curl -s ipinfo.io)
 # Get the disk usage
 disk_usage=$(df -h / | awk 'NR==2 {print $5}')
 
+# Get the PATH variable
+path_variable=$PATH
+
 # Display the information
 echo "Current Date and Time: $current_date_time"
 echo "Current User: $current_user"
@@ -37,8 +42,10 @@ echo "System Uptime: $uptime_info"
 echo "IP Address: $ip_address"
 echo "Location Information: $location_info"
 echo "Disk Usage: $disk_usage"
+echo "PATH Variable: $path_variable"
 
 test_python.sh
+
 cd pestaws
 pestpp-ies pest_ies.pst /h 172.31.46.122:9701
 
