@@ -3,7 +3,7 @@
 
 mkdir -p gis_py_10
 tar -xzf gis_py_10.tar.gz -C gis_py_10
-./gis_py_10/bin/python
+#./gis_py_10/bin/python
 source gis_py_10/bin/activate
 export PATH="/gis_py_10/bin:$PATH"
 unzip -q data.zip
@@ -44,7 +44,7 @@ echo "Location Information: $location_info"
 echo "Disk Usage: $disk_usage"
 echo "PATH Variable: $path_variable"
 
-test_python.sh
+#test_python.sh
 
 cd pestaws
 pestpp-ies pest_ies.pst /h 172.31.46.122:9701
