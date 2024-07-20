@@ -2,7 +2,7 @@
 
 # Test if Python is installed and callable
 if command -v python &> /dev/null; then
-    echo "Python3 is installed. Testing Python call..."
+    echo "Python is installed. Testing Python call..."
 
     # Call a simple Python command and store the result
     result=$(python -c "print('Python is working!')")
