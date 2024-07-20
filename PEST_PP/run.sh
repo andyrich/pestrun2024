@@ -1,14 +1,3 @@
-#!/bin/sh
-
-
-mkdir -p gis_py_10
-tar -xzf gis_py_10.tar.gz -C gis_py_10
-#./gis_py_10/bin/python
-source gis_py_10/bin/activate
-export PATH="/gis_py_10/bin:$PATH"
-unzip -q data.zip
-
-cp -f run.sh pestaws/run.sh
 
 # Get the current date and time
 current_date_time=$(date)
@@ -44,21 +33,7 @@ echo "Location Information: $location_info"
 echo "Disk Usage: $disk_usage"
 echo "PATH Variable: $path_variable"
 
-#test_python.sh
+source gis_py_10/bin/activate
 
-cd pestaws
-pestpp-ies pest_ies.pst
-#pestpp-ies pest_ies.pst /h 172.31.46.122:9701
-
-
-#sudo -u  ec2-user  'conda activate gis_py_10
-#unzip -q data.zip
-#cd pestaws
-#pestpp-ies pest_ies.pst /h 172.31.36.83:9701
-#'
-#conda activate gis_py_10
-#pwd
-#
-#unzip -q data.zip
-#cd pestaws
-#pestpp-ies pest_ies.pst /h 172.31.36.83:9701
+# Run the Python script
+python forward_run.py
