@@ -18,7 +18,7 @@ pest_ies.par_data.csv
 * observation data external
 pest_ies.obs_data.csv
 * model command line
-./test_python.sh
+python forward_run.py
 * model input external
 pest_ies.tplfile_data.csv
 * model output external

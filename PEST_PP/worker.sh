@@ -14,6 +14,8 @@ cp -f run.sh pestaws/run.sh
 chmod a+x mf-owhm.nix
 chmod a+x run.sh
 
+cp -f pest_ies.pst /pestaws/pest_ies.pst
+
 cd pestaws
 
 # Define a list of files to check
