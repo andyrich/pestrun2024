@@ -21,7 +21,7 @@ request_memory          = 2000M
 #request_disk            = 3G
 
 # all the model files and binaries are in data.zip
-transfer_input_files = data.zip, gis_py_10.tar.gz, run.sh.sh
+transfer_input_files = data.zip, gis_py_10.tar.gz, run.sh
 
 # adjust below to determine how many workers to start
 queue 2

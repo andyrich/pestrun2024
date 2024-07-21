@@ -9,6 +9,8 @@ export PATH="/gis_py_10/bin:$PATH"
 unzip -q data.zip
 
 cp -f run.sh pestaws/run.sh
+cp -f test_python.sh pestaws/test_python.sh
+chmod +x pestaws/test_python.sh
 chmod +x pestaws/mf-owhm.nix
 chmod +x pestaws/run.sh
 
