@@ -11,14 +11,16 @@ unzip -q data.zip
 cp -f run.sh pestaws/run.sh
 #cp -f test_python.sh pestaws/test_python.sh
 #chmod +x pestaws/test_python.sh
-chmod +x pestaws/mf-owhm.nix
-chmod +x pestaws/run.sh
+chmod a+x mf-owhm.nix
+chmod a+x run.sh
+
+cd pestaws
 
 # Define a list of files to check
 FILES=(
-    "/pestaws/run.sh"
-    "/pestaws/mf-owhm.nix"
-    "/pestaws/run.sh"
+    "run.sh"
+    "mf-owhm.nix"
+    "run.sh"
     # Add more files as needed
 )
 
@@ -67,7 +69,7 @@ echo "PATH Variable: $path_variable"
 
 #test_python.sh
 
-cd pestaws
+
 pestpp-ies pest_ies.pst
 #pestpp-ies pest_ies.pst /h 172.31.46.122:9701
 
