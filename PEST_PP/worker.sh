@@ -8,15 +8,17 @@ source gis_py_10/bin/activate
 export PATH="/gis_py_10/bin:$PATH"
 unzip -q data.zip
 
-cp -f run.sh pestaws/run.sh
+cp -f run.sh pestaws
 #cp -f test_python.sh pestaws/test_python.sh
 #chmod +x pestaws/test_python.sh
-chmod a+x mf-owhm.nix
-chmod a+x run.sh
 
-cp -f pest_ies.pst /pestaws/pest_ies.pst
+
+cp -f pest_ies.pst pestaws
 
 cd pestaws
+
+chmod a+x mf-owhm.nix
+chmod a+x run.sh
 
 # Define a list of files to check
 FILES=(
