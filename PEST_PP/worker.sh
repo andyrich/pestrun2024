@@ -9,10 +9,6 @@ export PATH="/gis_py_10/bin:$PATH"
 unzip -q data.zip
 
 cp -f run.sh pestaws
-#cp -f test_python.sh pestaws/test_python.sh
-#chmod +x pestaws/test_python.sh
-
-
 cp -f pest_ies.pst pestaws
 
 cd pestaws
@@ -74,8 +70,8 @@ echo "PATH Variable: $path_variable"
 #test_python.sh
 
 
-pestpp-ies pest_ies.pst
-#pestpp-ies pest_ies.pst /h 172.31.46.122:9701
+#pestpp-ies pest_ies.pst
+pestpp-ies pest_ies.pst /h 172.31.46.122:9701
 
 
 #sudo -u  ec2-user  'conda activate gis_py_10
