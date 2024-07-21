@@ -34,6 +34,7 @@ echo "Disk Usage: $disk_usage"
 echo "PATH Variable: $path_variable"
 
 source gis_py_10/bin/activate
-
+echo "proceeding past activating gis_py_10"
+echo "running forward run.py"
 # Run the Python script
 python forward_run.py

@@ -9,10 +9,28 @@ export PATH="/gis_py_10/bin:$PATH"
 unzip -q data.zip
 
 cp -f run.sh pestaws/run.sh
-cp -f test_python.sh pestaws/test_python.sh
-chmod +x pestaws/test_python.sh
+#cp -f test_python.sh pestaws/test_python.sh
+#chmod +x pestaws/test_python.sh
 chmod +x pestaws/mf-owhm.nix
 chmod +x pestaws/run.sh
+
+# Define a list of files to check
+FILES=(
+    "/pestaws/run.sh"
+    "/pestaws/mf-owhm.nix"
+    "/pestaws/run.sh"
+    # Add more files as needed
+)
+
+# Loop through the list of files
+for FILE in "${FILES[@]}"; do
+    if [ -x "$FILE" ]; then
+        echo "The file '$FILE' is executable."
+    else
+        echo "The file '$FILE' is not executable."
+    fi
+done
+
 
 # Get the current date and time
 current_date_time=$(date)
@@ -43,8 +61,7 @@ echo "Current Date and Time: $current_date_time"
 echo "Current User: $current_user"
 echo "Hostname: $hostname"
 echo "System Uptime: $uptime_info"
-echo "IP Address: $ip_address"
-echo "Location Information: $location_info"
+
 echo "Disk Usage: $disk_usage"
 echo "PATH Variable: $path_variable"
 
