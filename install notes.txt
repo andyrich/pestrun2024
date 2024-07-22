@@ -1,0 +1,66 @@
+https://github.com/DOI-USGS/cloud-ht2c/blob/main/docs/1-create-base-image.md
+
+creating new ami
+
+#install miniconda
+https://docs.anaconda.com/miniconda/#quick-command-line-install
+
+These four commands quickly and quietly install the latest 64-bit version of the installer and then clean up after themselves. To install a different version or architecture of Miniconda for Linux, change the name of the .sh installer in the wget command.
+
+mkdir -p ~/miniconda3
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
+bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
+rm -rf ~/miniconda3/miniconda.sh
+
+~/miniconda3/bin/conda init bash
+~/miniconda3/bin/conda init zsh
+
+
+if necessary:
+conda install -c anaconda git
+
+git clone https://github.com/andyrich/pestrun2024.git
+
+
+# after installing
+close and reopen 
+
+conda env create  -f  pestrun2024/setup.yml
+#install htcondor via python?
+conda install -c conda-forge python-htcondor
+
+# initialize a submit object from a python dict
+# note that values should be strings
+mydict = {
+    "executable": "/bin/sleep",
+    "arguments": "5s",
+    "log": "$(ClusterId).log",
+    "My.CustomAttribute": classad.quote("foobar"),
+}
+from_dict = htcondor.Submit(mydict)
+
+
+
+change to root
+sudo su
+
+yum install -y ansible
+ansible-pull -U https://github.com/DOI-USGS/cloud-ht2c.git -i localhost htcondor-al2023/ansible/playbook.yml
+
+
+ami-065bad154bef4539d
+
+how to execute file in linux:
+sudo chmod +x mf-owhm.nix
+
+#to install pest:
+import pyemu
+# Or use an auto-select option
+pyemu.utils.get_pestpp(":python")
+
+# to run model file
+chmod +x run.sh
+./run.sh
+
+# to install condor
+https://htcondor.readthedocs.io/en/latest/getting-htcondor/install-linux-as-user.html
