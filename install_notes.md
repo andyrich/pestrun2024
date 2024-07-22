@@ -90,59 +90,82 @@ https://htcondor.readthedocs.io/en/latest/getting-htcondor/install-linux-as-user
 `. ~/condor/condor.sh`
 
 ### check if condor is running
-`condor_master`  
-`condor_status`
+```bash
+condor_master
+condor_status
+```
 
 
-# conda-pack
-_https://conda.github.io/conda-pack/_  
+
+# how to install conda-pack
+[conda-pack Documentation](https://conda.github.io/conda-pack/)
+
+```bash
 conda install conda-pack  
-conda install -c conda-forge conda-pack  
+conda install -c conda-forge conda-pack
+```
 
-# Pack environment my_env into my_env.tar.gz
-$ conda pack -n my_env  
+### Pack environment my_env into my_env.tar.gz
+```bash
+conda pack -n my_env
+```
 
-## On the target machine  
+### On the target machine
 
-# Unpack environment into directory `my_env`
-$ mkdir -p my_env  
-$ tar -xzf my_env.tar.gz -C my_env  
+### Unpack environment into directory `my_env`
+```bash
+mkdir -p my_env
+tar -xzf my_env.tar.gz -C my_env
+```
 
-# Use python without activating or fixing the prefixes. Most python
-# libraries will work fine, but things that require prefix cleanups
-# will fail.
-$ ./my_env/bin/python  
+### Use python without activating or fixing the prefixes. Most python
+### libraries will work fine, but things that require prefix cleanups will fail.  
+```bash
+./my_env/bin/python
+```
 
-# Activate the environment. This adds `my_env/bin` to your path
-$ source my_env/bin/activate  
+### Activate the environment. This adds `my_env/bin` to your path
+```bash
+source my_env/bin/activate
+```
 
-# Run python from in the environment
-(my_env) $ python  
+### Run python from in the environment
+```bash
+(my_env) $ python
+```
 
-# Cleanup prefixes from in the active environment.
-# Note that this command can also be run without activating the environment
-# as long as some version of python is already installed on the machine.
-(my_env) $ conda-unpack  
+### Cleanup prefixes from in the active environment.
+### Note that this command can also be run without activating the environment
+### as long as some version of python is already installed on the machine.
+```bash
+(my_env) $ conda-unpack
+```
 
-# to download a file from google drive, use the following
+
+# model files 
+upload zipped directory to google drive (eg pestaws)
+this will be downloaded via curl, then unzipped.
+the unzipped version will be used in master directory, the zipped version will be sent to each slave
+
+
+## to download a file from google drive, use the following
 1E8URF78HnwjvrqlRhs9-yWmnRZ2oppKl
 
 curl -L "https://drive.usercontent.google.com/download?id=1SEWk-Iug6XegXBGJmsW-w0GyWvDv4y-l&confirm=xxx" -o data.zip  
 
 https://drive.google.com/file/d/1SEWk-Iug6XegXBGJmsW-w0GyWvDv4y-l/view?usp=drive_link
 
-# to unzip the file (silently)
+## to unzip the file (silently)
 unzip -q data.zip
 
-# to create the stack via cloudformation
-use this:
-htcondor-al2023
 
-#AMI id for 07*16
+
+## AMI id for 07/16
 	
-ami-07dd3094ad4d3a0cf
+ami-07dd3094ad4d3a0cf  
 ![img_1.png](img_1.png)
 ![img_2.png](img_2.png)
 
-# to open stack:
+## to open stack:
+may need to be edited before running
 https://us-west-2.console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/quickcreate?templateURL=https%3A%2F%2Fs3.us-west-2.amazonaws.com%2Fcf-templates-1mlwdo4ihaz0m-us-west-2%2F2024-07-19T201837.692Z632-htcondor-al2023.yml&stackName=fatstack&param_pAllowedCidrIp=172.31.32.0%2F29&param_pControlNodeSshKey=&param_pWorkerNodeInstanceProfile=&param_pControlNodeInstanceType=c5.xlarge&param_pNamePrefix=fsp&param_pWorkerNodeVolumeSize=64&param_pUseSpotInstances=false&param_pEfsId=&param_pWorkerNodeAmiId=ami-07dd3094ad4d3a0cf&param_pWorkerSpotNodeInstanceType2=&param_pWorkerSpotNodeInstanceType1=&param_pWorkerSpotNodeInstanceType3=&param_pSubnets%5B%5D=subnet-035c45c67e2b30a6b&param_pSubnets%5B%5D=subnet-0c61a18562c6ab8ba&param_pSubnets%5B%5D=subnet-000ddd624df4900ca&param_pSubnets%5B%5D=subnet-0f7356d9d88d8ef58&param_pControlNodeVolumeSize=64&param_pControlNodeInstanceProfile=&param_pWorkerNodeInstanceType=c5.xlarge&param_pControlNodeAmiId=ami-07dd3094ad4d3a0cf&param_pWorkerNodeTimeout=0&param_pVPCID=vpc-0dbd3f134be49e563&param_pWorkerNodeKillSwitchTimeStamp=NULL&param_pUseSsh=true&param_pNumberOfWorkerNodes=2&param_pSshCidrIp=0.0.0.0%2F0
