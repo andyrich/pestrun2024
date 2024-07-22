@@ -12,3 +12,4 @@ dependencies:
 - shapely
 - git
 - htcondor
+- conda-pack
