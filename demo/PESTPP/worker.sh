@@ -4,5 +4,5 @@ pwd
 
 tar xzf data.tar
 cd data
-./pestpp-ies freyberg6_run_ies.pst /h 130.11.177.5:9701
+./pestpp-ies freyberg6_run_ies.pst /h 172.31.32.153:9701
 
