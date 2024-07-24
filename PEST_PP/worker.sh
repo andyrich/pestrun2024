@@ -20,7 +20,6 @@ chmod a+x run.sh
 FILES=(
     "run.sh"
     "mf-owhm.nix"
-    "run.sh"
     # Add more files as needed
 )
 
