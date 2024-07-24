@@ -70,7 +70,7 @@ echo "PATH Variable: $path_variable"
 
 
 #pestpp-ies pest_ies.pst
-pestpp-ies pest_ies.pst /h 172.31.32.153:9701
+pestpp-ies pest_ies.pst /h 172.31.32.159:9701
 
 
 #sudo -u  ec2-user  'conda activate gis_py_10
