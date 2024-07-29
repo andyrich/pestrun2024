@@ -1,0 +1,448 @@
+time,elapsed_seconds,message
+2024-07-24 05:56:11,1.3002e-05,PEST++ performance logger started
+2024-07-24 05:56:11,9.5094e-05,starting to process control file
+2024-07-24 05:56:11,0.203881,finished processing control file
+2024-07-24 05:56:11,0.054646,initializing
+2024-07-24 05:56:11,0.00117725,using glm algorithm
+2024-07-24 05:56:11,2.4362e-05,using REDSVD for truncated svd solve
+2024-07-24 05:56:11,2.3834e-05,maxsing: 10000000
+2024-07-24 05:56:11,1.7547e-05,eigthresh:  1e-06
+2024-07-24 05:56:11,1.395e-05,initializing localizer
+2024-07-24 05:56:11,9.883e-06,loading localizer matrix from file spatial_loc.jcb
+2024-07-24 05:56:12,0.310775,processing localizer matrix
+2024-07-24 05:56:12,0.355747,using localized solution with 5874 sequential upgrade steps
+2024-07-24 05:56:12,4.3044e-05,localizing by parameters
+2024-07-24 05:56:12,1.8113e-05,using lambda multipliers: 
+2024-07-24 05:56:12,2.4691e-05,using lambda scaling factors: 
+2024-07-24 05:56:12,1.7153e-05,acceptable phi factor:  1.05
+2024-07-24 05:56:12,1.6877e-05,lambda increase factor:  10
+2024-07-24 05:56:12,3.0425e-05,lambda decrease factor:  0.75
+2024-07-24 05:56:12,2.5229e-05,max run fail:  1
+2024-07-24 05:56:12,0.00631099,initializing prior parameter covariance matrix
+2024-07-24 05:56:12,2.1595e-05,initializing parcov
+2024-07-24 05:56:12,0.0104759,parcov loaded  from parameter bounds, using par_sigma_range 4
+2024-07-24 05:56:12,0.00954571,initializing observation noise covariance matrix
+2024-07-24 05:56:12,0.0573217,obscov loaded  from observation weights
+2024-07-24 05:56:12,0.0100713,using reg_factor:  0
+2024-07-24 05:56:12,3.4448e-05,drawing parameter realizations:  150
+2024-07-24 05:56:12,0.0216937,parameters not grouped by parameter groups, reordering par ensemble
+2024-07-24 05:56:12,0.01294,making standard normal draws
+2024-07-24 05:56:12,0.0551767,scaling by std
+2024-07-24 05:56:12,0.000685879,checking realization for invalid values
+2024-07-24 05:56:12,0.00228662,resizing reals matrix
+2024-07-24 05:56:12,0.00443901,filling reals matrix and adding mean values
+2024-07-24 05:56:12,0.0279571,not using prior parameter covariance matrix scaling
+2024-07-24 05:56:12,4.415e-05,drawing observation noise realizations:  150
+2024-07-24 05:56:12,0.00942697,observations not grouped by observation groups, reordering obs ensemble
+2024-07-24 05:56:12,0.00620617,making standard normal draws
+2024-07-24 05:56:12,0.041525,scaling by std
+2024-07-24 05:56:12,0.000533831,checking realization for invalid values
+2024-07-24 05:56:12,0.00207654,resizing reals matrix
+2024-07-24 05:56:12,0.00284856,filling reals matrix and adding mean values
+2024-07-24 05:56:12,0.0369049,setting weights ensemble from control file weights
+2024-07-24 05:56:14,1.57761,saved weight ensemble to  pest_ies.weights.csv
+2024-07-24 05:56:14,2.8578e-05,checking for denormal values in weights ensemble
+2024-07-24 05:56:14,0.00398231,adding 'base' parameter values to ensemble
+2024-07-24 05:56:14,0.0220041,adding 'base' observation values to ensemble
+2024-07-24 05:56:14,0.0109442,adding 'base' weight values to weight ensemble
+2024-07-24 05:56:14,0.00931676,checking for denormal values in pe
+2024-07-24 05:56:15,0.901852,saved initial parameter ensemble to  pest_ies.0.par.csv
+2024-07-24 05:56:15,6.2421e-05,checking for denormal values in obs + noise ensemble
+2024-07-24 05:56:17,2.16649,saved obs+noise observation ensemble (obsval + noise realizations) to  pest_ies.obs+noise.csv
+2024-07-24 05:56:17,3.5631e-05,using subset in lambda testing, number of realizations used in subset testing:  4
+2024-07-24 05:56:17,1.541e-05,subset how:  RANDOM
+2024-07-24 05:56:17,0.0187026,centering on ensemble mean vector
+2024-07-24 05:56:17,2.8395e-05,running initial ensemble
+2024-07-24 05:56:17,1.8056e-05,running initial ensemble of size 150
+2024-07-24 05:56:17,1.7838e-05,queuing 150 runs
+2024-07-24 05:56:17,0.309315,making runs
+2024-07-25 04:07:25,79867.5,processing runs
+2024-07-25 04:07:27,2.3109,saved initial obs ensemble to pest_ies.0.obs.csv
+2024-07-25 04:07:27,0.107008,calc pre-drop phi
+2024-07-25 04:07:27,0.0508448,pre-drop initial phi summary
+2024-07-25 04:07:27,0.0281864,checking for prior-data conflict...
+2024-07-25 04:07:27,0.0104539,WARNING: 259 non-zero weighted observations are in conflict with the prior simulated ensemble.
+
+2024-07-25 04:07:27,0.000322863,  WARNING: Prior-data conflict detected.  Continuing with IES parameter
+           adjustment will likely result in parameter and forecast bias.
+           Consider using 'ies_drop_conflicts' as a quick fix.
+2024-07-25 04:07:27,0.0399459,dropping realizations as bad:  1
+2024-07-25 04:07:27,5.8989e-05,dropping par:obs realizations: 90 : 90 , 
+2024-07-25 04:07:29,1.40146,saved adjusted weight ensemble to  pest_ies.adjusted.weights.csv
+2024-07-25 04:07:29,2.6496e-05,calc initial phi
+2024-07-25 04:07:29,0.048612,initial phi summary
+2024-07-25 04:07:29,0.00493941,current lambda: 1e+11
+2024-07-25 04:07:29,2.573e-05,initialization complete
+2024-07-25 04:07:29,9.7376e-05,starting solve for iteration: 1
+2024-07-25 04:07:29,1.0564e-05,starting solve for iteration: 1
+2024-07-25 04:07:29,2.5526e-05,current lambda:  1e+11
+2024-07-25 04:07:29,1.1063e-05,reordering variables in pe
+2024-07-25 04:07:29,0.45402,preparing EnsembleSolver
+2024-07-25 04:07:29,0.0245691,preparing fast-lookup containers for threaded localization solve
+2024-07-25 04:07:29,0.0855177,starting calcs for glm factor 1e+10
+2024-07-25 04:07:29,3.4356e-05,see .log file for more details
+2024-07-25 04:07:29,0.00882244,using local analysis upgrade thread
+2024-07-25 04:08:32,62.3465,upgrade thread progress: 1000 of 5874 parts done
+2024-07-25 04:09:35,62.9686,upgrade thread progress: 2000 of 5874 parts done
+2024-07-25 04:10:37,62.6342,upgrade thread progress: 3000 of 5874 parts done
+2024-07-25 04:11:40,62.9433,upgrade thread progress: 4000 of 5874 parts done
+2024-07-25 04:12:47,66.478,upgrade thread progress: 5000 of 5874 parts done
+2024-07-25 04:13:41,54.2292,finished calcs for: 1e+10
+2024-07-25 04:13:41,4.4772e-05,starting calcs for glm factor 1e+11
+2024-07-25 04:13:41,1.1052e-05,see .log file for more details
+2024-07-25 04:13:41,0.00783822,using local analysis upgrade thread
+2024-07-25 04:14:44,62.5669,upgrade thread progress: 1000 of 5874 parts done
+2024-07-25 04:15:47,62.9205,upgrade thread progress: 2000 of 5874 parts done
+2024-07-25 04:16:49,62.6156,upgrade thread progress: 3000 of 5874 parts done
+2024-07-25 04:17:52,62.8236,upgrade thread progress: 4000 of 5874 parts done
+2024-07-25 04:18:58,65.7003,upgrade thread progress: 5000 of 5874 parts done
+2024-07-25 04:19:52,54.0885,finished calcs for: 1e+11
+2024-07-25 04:19:52,4.1465e-05,starting calcs for glm factor 1e+12
+2024-07-25 04:19:52,1.0849e-05,see .log file for more details
+2024-07-25 04:19:52,0.00795084,using local analysis upgrade thread
+2024-07-25 04:20:54,62.3065,upgrade thread progress: 1000 of 5874 parts done
+2024-07-25 04:21:58,63.5234,upgrade thread progress: 2000 of 5874 parts done
+2024-07-25 04:23:00,62.3851,upgrade thread progress: 3000 of 5874 parts done
+2024-07-25 04:24:02,62.4747,upgrade thread progress: 4000 of 5874 parts done
+2024-07-25 04:25:08,65.6728,upgrade thread progress: 5000 of 5874 parts done
+2024-07-25 04:26:02,54.0472,finished calcs for: 1e+12
+2024-07-25 04:26:02,4.7894e-05,running upgrade ensembles
+2024-07-25 04:26:02,1.0132e-05,queuing 9 ensembles
+2024-07-25 04:26:02,0.00633678,subset idx:pe real name:  0:0, 21:21, 38:38, 148:BASE, 
+2024-07-25 04:26:02,4.2763e-05,subset idx:oe real name:  0:0, 21:21, 38:38, 148:BASE, 
+2024-07-25 04:26:02,0.0790391,making runs
+2024-07-25 12:18:14,28331.7,processing runs
+2024-07-25 12:18:14,0.168695,evaluating upgrade ensembles
+2024-07-25 12:18:14,4.7112e-05,last mean:  2.02173e+15
+2024-07-25 12:18:14,1.4365e-05,last stdev:  2.45468e+16
+2024-07-25 12:18:14,0.0233775,phi summary for lambda, scale fac:
+2024-07-25 12:18:14,0.0235245,phi summary for lambda, scale fac:
+2024-07-25 12:18:14,0.0224339,phi summary for lambda, scale fac:
+2024-07-25 12:18:14,0.0223874,phi summary for lambda, scale fac:
+2024-07-25 12:18:14,0.0220501,phi summary for lambda, scale fac:
+2024-07-25 12:18:14,0.022268,phi summary for lambda, scale fac:
+2024-07-25 12:18:14,0.0223896,phi summary for lambda, scale fac:
+2024-07-25 12:18:14,0.0224747,phi summary for lambda, scale fac:
+2024-07-25 12:18:14,0.0224911,phi summary for lambda, scale fac:
+2024-07-25 12:18:14,0.0194229,phi summary for best lambda, scale fac: 
+2024-07-25 12:18:14,0.0172594,running remaining realizations for best lambda, scale:
+2024-07-25 12:18:14,2.4919e-05,dropping subset idxs from remaining_pe_lam
+2024-07-25 12:18:14,0.00616608,dropping subset idxs from remaining_oe_lam
+2024-07-25 12:18:14,0.00969205,queuing 145 runs
+2024-07-25 12:18:15,0.259139,making runs
+2024-07-26 10:26:35,79700.7,processing runs
+2024-07-26 10:26:36,0.404801,assembling ensembles
+2024-07-26 10:26:36,0.0459576,dropping realizations as bad:  1
+2024-07-26 10:26:36,5.3153e-05,dropping par:obs realizations: 66 : 66 , 
+2024-07-26 10:26:36,0.0144835,updating phi
+2024-07-26 10:26:36,0.0436444,phi summary for entire ensemble using lambda,scale_fac 
+2024-07-26 10:26:36,0.0442339,last best mean phi * acceptable phi factor:  2.12282e+15
+2024-07-26 10:26:36,3.8342e-05,current best mean phi:  9.50851e+11
+2024-07-26 10:26:36,1.7154e-05,updating parameter ensemble
+2024-07-26 10:26:36,6.479e-06,updating parameter ensemble
+2024-07-26 10:26:36,0.00387672,updating lambda to  7.5e+09
+2024-07-26 10:26:39,2.91727,phi-based termination criteria check
+2024-07-26 10:26:39,3.6943e-05,phiredstp:  0.01
+2024-07-26 10:26:39,2.796e-05,nphistp:  3
+2024-07-26 10:26:39,1.9307e-05,nphinored (also used for consecutive bad lambda cycles):  3
+2024-07-26 10:26:39,2.5972e-05,best mean phi sequence: 
+2024-07-26 10:26:39,1.9664e-05,best phi yet:  9.50851e+11
+2024-07-26 10:26:39,1.8488e-05,number of consecutive bad lambda testing cycles:  0
+2024-07-26 10:26:39,2.3892e-05,number of iterations satisfying phiredstp criteria:  1
+2024-07-26 10:26:39,1.818e-05,number of iterations since best yet mean phi:  0
+2024-07-26 10:26:39,2.888e-05,starting solve for iteration: 2
+2024-07-26 10:26:39,9.75e-06,starting solve for iteration: 2
+2024-07-26 10:26:39,2.1314e-05,current lambda:  7.5e+09
+2024-07-26 10:26:39,1.0747e-05,reordering variables in pe
+2024-07-26 10:26:39,0.459953,preparing EnsembleSolver
+2024-07-26 10:26:39,0.0108657,preparing fast-lookup containers for threaded localization solve
+2024-07-26 10:26:39,0.0701897,starting calcs for glm factor 7.5e+08
+2024-07-26 10:26:39,3.0891e-05,see .log file for more details
+2024-07-26 10:26:39,0.00779895,using local analysis upgrade thread
+2024-07-26 10:27:40,60.5741,upgrade thread progress: 1000 of 5874 parts done
+2024-07-26 10:28:41,61.0577,upgrade thread progress: 2000 of 5874 parts done
+2024-07-26 10:29:42,60.7776,upgrade thread progress: 3000 of 5874 parts done
+2024-07-26 10:30:43,60.9769,upgrade thread progress: 4000 of 5874 parts done
+2024-07-26 10:31:47,64.272,upgrade thread progress: 5000 of 5874 parts done
+2024-07-26 10:32:39,52.3353,finished calcs for: 7.5e+08
+2024-07-26 10:32:39,4.6973e-05,starting calcs for glm factor 7.5e+09
+2024-07-26 10:32:39,0.000101412,see .log file for more details
+2024-07-26 10:32:39,0.00804674,using local analysis upgrade thread
+2024-07-26 10:33:40,60.3737,upgrade thread progress: 1000 of 5874 parts done
+2024-07-26 10:34:41,61.0319,upgrade thread progress: 2000 of 5874 parts done
+2024-07-26 10:35:41,60.6129,upgrade thread progress: 3000 of 5874 parts done
+2024-07-26 10:36:42,60.838,upgrade thread progress: 4000 of 5874 parts done
+2024-07-26 10:37:46,64.1023,upgrade thread progress: 5000 of 5874 parts done
+2024-07-26 10:38:39,52.4052,finished calcs for: 7.5e+09
+2024-07-26 10:38:39,4.7313e-05,starting calcs for glm factor 7.5e+10
+2024-07-26 10:38:39,1.0174e-05,see .log file for more details
+2024-07-26 10:38:39,0.00830402,using local analysis upgrade thread
+2024-07-26 10:39:39,60.4003,upgrade thread progress: 1000 of 5874 parts done
+2024-07-26 10:40:40,61.2681,upgrade thread progress: 2000 of 5874 parts done
+2024-07-26 10:41:41,60.637,upgrade thread progress: 3000 of 5874 parts done
+2024-07-26 10:42:42,60.9234,upgrade thread progress: 4000 of 5874 parts done
+2024-07-26 10:43:46,64.1618,upgrade thread progress: 5000 of 5874 parts done
+2024-07-26 10:44:39,52.4677,finished calcs for: 7.5e+10
+2024-07-26 10:44:39,4.6832e-05,running upgrade ensembles
+2024-07-26 10:44:39,9.925e-06,queuing 9 ensembles
+2024-07-26 10:44:39,0.00648938,subset idx:pe real name:  3:BASE, 19:16, 75:75, 115:116, 
+2024-07-26 10:44:39,4.3457e-05,subset idx:oe real name:  3:BASE, 19:16, 75:75, 115:116, 
+2024-07-26 10:44:39,0.0793416,making runs
+2024-07-26 16:59:02,22463.8,processing runs
+2024-07-26 16:59:03,0.169806,evaluating upgrade ensembles
+2024-07-26 16:59:03,4.971e-05,last mean:  9.50851e+11
+2024-07-26 16:59:03,1.4603e-05,last stdev:  9.60324e+12
+2024-07-26 16:59:03,0.0237091,phi summary for lambda, scale fac:
+2024-07-26 16:59:03,0.0238718,phi summary for lambda, scale fac:
+2024-07-26 16:59:03,0.0229772,phi summary for lambda, scale fac:
+2024-07-26 16:59:03,0.0230805,phi summary for lambda, scale fac:
+2024-07-26 16:59:03,0.0233118,phi summary for lambda, scale fac:
+2024-07-26 16:59:03,0.0232226,phi summary for lambda, scale fac:
+2024-07-26 16:59:03,0.0228166,phi summary for lambda, scale fac:
+2024-07-26 16:59:03,0.0228373,phi summary for lambda, scale fac:
+2024-07-26 16:59:03,0.0234506,phi summary for lambda, scale fac:
+2024-07-26 16:59:03,0.0194812,phi summary for best lambda, scale fac: 
+2024-07-26 16:59:03,0.0172679,running remaining realizations for best lambda, scale:
+2024-07-26 16:59:03,2.314e-05,dropping subset idxs from remaining_pe_lam
+2024-07-26 16:59:03,0.00679527,dropping subset idxs from remaining_oe_lam
+2024-07-26 16:59:03,0.00992254,queuing 144 runs
+2024-07-26 16:59:03,0.256045,making runs
+2024-07-27 15:41:02,81719.2,processing runs
+2024-07-27 15:41:03,0.394397,assembling ensembles
+2024-07-27 15:41:03,0.0485895,dropping realizations as bad:  1
+2024-07-27 15:41:03,5.7525e-05,dropping par:obs realizations: 44 : 44 , 
+2024-07-27 15:41:03,0.0132316,updating phi
+2024-07-27 15:41:03,0.0436431,phi summary for entire ensemble using lambda,scale_fac 
+2024-07-27 15:41:03,0.0451987,last best mean phi * acceptable phi factor:  9.98393e+11
+2024-07-27 15:41:03,4.2373e-05,current best mean phi:  1.16677e+10
+2024-07-27 15:41:03,1.4748e-05,updating parameter ensemble
+2024-07-27 15:41:03,6.657e-06,updating parameter ensemble
+2024-07-27 15:41:03,0.0038977,updating lambda to  5.625e+08
+2024-07-27 15:41:06,2.88136,phi-based termination criteria check
+2024-07-27 15:41:06,0.000118616,phiredstp:  0.01
+2024-07-27 15:41:06,1.9794e-05,nphistp:  3
+2024-07-27 15:41:06,1.8923e-05,nphinored (also used for consecutive bad lambda cycles):  3
+2024-07-27 15:41:06,2.1393e-05,best mean phi sequence: 
+2024-07-27 15:41:06,1.9547e-05,best phi yet:  1.16677e+10
+2024-07-27 15:41:06,1.8239e-05,number of consecutive bad lambda testing cycles:  0
+2024-07-27 15:41:06,1.668e-05,number of iterations satisfying phiredstp criteria:  1
+2024-07-27 15:41:06,1.8207e-05,number of iterations since best yet mean phi:  0
+2024-07-27 15:41:06,2.5312e-05,starting solve for iteration: 3
+2024-07-27 15:41:06,9.248e-06,starting solve for iteration: 3
+2024-07-27 15:41:06,1.9192e-05,current lambda:  5.625e+08
+2024-07-27 15:41:06,1.1188e-05,reordering variables in pe
+2024-07-27 15:41:06,0.457658,preparing EnsembleSolver
+2024-07-27 15:41:06,0.0111986,preparing fast-lookup containers for threaded localization solve
+2024-07-27 15:41:06,0.0667761,starting calcs for glm factor 5.625e+07
+2024-07-27 15:41:06,3.2008e-05,see .log file for more details
+2024-07-27 15:41:06,0.00776227,using local analysis upgrade thread
+2024-07-27 15:42:08,61.3202,upgrade thread progress: 1000 of 5874 parts done
+2024-07-27 15:43:10,62.7497,upgrade thread progress: 2000 of 5874 parts done
+2024-07-27 15:44:13,62.2452,upgrade thread progress: 3000 of 5874 parts done
+2024-07-27 15:45:15,62.5538,upgrade thread progress: 4000 of 5874 parts done
+2024-07-27 15:46:21,65.383,upgrade thread progress: 5000 of 5874 parts done
+2024-07-27 15:47:15,53.9017,finished calcs for: 5.625e+07
+2024-07-27 15:47:15,5.0474e-05,starting calcs for glm factor 5.625e+08
+2024-07-27 15:47:15,1.1321e-05,see .log file for more details
+2024-07-27 15:47:15,0.00852462,using local analysis upgrade thread
+2024-07-27 15:48:16,61.292,upgrade thread progress: 1000 of 5874 parts done
+2024-07-27 15:49:18,61.7532,upgrade thread progress: 2000 of 5874 parts done
+2024-07-27 15:50:19,61.5795,upgrade thread progress: 3000 of 5874 parts done
+2024-07-27 15:51:21,61.9984,upgrade thread progress: 4000 of 5874 parts done
+2024-07-27 15:52:26,64.5035,upgrade thread progress: 5000 of 5874 parts done
+2024-07-27 15:53:19,53.7238,finished calcs for: 5.625e+08
+2024-07-27 15:53:19,4.9064e-05,starting calcs for glm factor 5.625e+09
+2024-07-27 15:53:19,1.061e-05,see .log file for more details
+2024-07-27 15:53:19,0.00811782,using local analysis upgrade thread
+2024-07-27 15:54:21,61.9908,upgrade thread progress: 1000 of 5874 parts done
+2024-07-27 15:55:24,62.777,upgrade thread progress: 2000 of 5874 parts done
+2024-07-27 15:56:26,62.2074,upgrade thread progress: 3000 of 5874 parts done
+2024-07-27 15:57:28,61.7347,upgrade thread progress: 4000 of 5874 parts done
+2024-07-27 15:58:33,64.4934,upgrade thread progress: 5000 of 5874 parts done
+2024-07-27 15:59:26,53.0093,finished calcs for: 5.625e+09
+2024-07-27 15:59:26,4.3799e-05,running upgrade ensembles
+2024-07-27 15:59:26,9.865e-06,queuing 9 ensembles
+2024-07-27 15:59:26,0.00634161,subset idx:pe real name:  0:BASE, 42:39, 101:102, 118:120, 
+2024-07-27 15:59:26,4.23e-05,subset idx:oe real name:  0:BASE, 42:39, 101:102, 118:120, 
+2024-07-27 15:59:26,0.0794872,making runs
+2024-07-27 21:51:48,21141.9,processing runs
+2024-07-27 21:51:48,0.164882,evaluating upgrade ensembles
+2024-07-27 21:51:48,4.5597e-05,last mean:  1.16677e+10
+2024-07-27 21:51:48,1.7649e-05,last stdev:  6.2532e+10
+2024-07-27 21:51:48,0.0226073,phi summary for lambda, scale fac:
+2024-07-27 21:51:48,0.0225412,phi summary for lambda, scale fac:
+2024-07-27 21:51:48,0.0222073,phi summary for lambda, scale fac:
+2024-07-27 21:51:48,0.0219619,phi summary for lambda, scale fac:
+2024-07-27 21:51:48,0.0217543,phi summary for lambda, scale fac:
+2024-07-27 21:51:48,0.0217035,phi summary for lambda, scale fac:
+2024-07-27 21:51:48,0.0217735,phi summary for lambda, scale fac:
+2024-07-27 21:51:48,0.0216903,phi summary for lambda, scale fac:
+2024-07-27 21:51:48,0.0218542,phi summary for lambda, scale fac:
+2024-07-27 21:51:48,0.0188508,phi summary for best lambda, scale fac: 
+2024-07-27 21:51:48,0.0155133,running remaining realizations for best lambda, scale:
+2024-07-27 21:51:48,1.5602e-05,dropping subset idxs from remaining_pe_lam
+2024-07-27 21:51:48,0.0054217,dropping subset idxs from remaining_oe_lam
+2024-07-27 21:51:48,0.00879723,queuing 143 runs
+2024-07-27 21:51:48,0.254201,making runs
+2024-07-28 19:14:51,76982.3,processing runs
+2024-07-28 19:14:51,0.395693,assembling ensembles
+2024-07-28 19:14:51,0.0444863,dropping realizations as bad:  1
+2024-07-28 19:14:51,5.3353e-05,dropping par:obs realizations: 68 : 68 , 
+2024-07-28 19:14:51,0.0131422,updating phi
+2024-07-28 19:14:51,0.042815,phi summary for entire ensemble using lambda,scale_fac 
+2024-07-28 19:14:51,0.0413106,last best mean phi * acceptable phi factor:  1.22511e+10
+2024-07-28 19:14:51,4.2889e-05,current best mean phi:  1.15687e+13
+2024-07-28 19:14:51,1.3908e-05,only updating realizations with reduced phi
+2024-07-28 19:14:51,0.0783741,updating pe:oe real =BASE:BASE, current phi: new phi  =6.51666e+09:4.68398e+09
+2024-07-28 19:14:51,0.000468365,updating pe:oe real =39:39, current phi: new phi  =5.54341e+09:5.34072e+09
+2024-07-28 19:14:51,0.000363402,updating pe:oe real =102:102, current phi: new phi  =7.60906e+09:6.78029e+09
+2024-07-28 19:14:51,0.000336604,updating pe:oe real =120:120, current phi: new phi  =5.63415e+09:5.54536e+09
+2024-07-28 19:14:51,0.000316065,updating pe:oe real =16:16, current phi: new phi  =6.02509e+09:5.61075e+09
+2024-07-28 19:14:51,0.000325263,updating pe:oe real =75:75, current phi: new phi  =7.1821e+09:6.57818e+09
+2024-07-28 19:14:51,0.000207155,updating pe:oe real =116:116, current phi: new phi  =6.58745e+09:6.17954e+09
+2024-07-28 19:14:51,0.000223813,updating pe:oe real =0:0, current phi: new phi  =6.08664e+09:5.47252e+09
+2024-07-28 19:14:51,0.000194127,updating pe:oe real =21:21, current phi: new phi  =6.60381e+09:6.14121e+09
+2024-07-28 19:14:51,0.00023097,updating pe:oe real =38:38, current phi: new phi  =6.3344e+09:6.06633e+09
+2024-07-28 19:14:51,0.000189468,updating pe:oe real =1:1, current phi: new phi  =6.50369e+09:6.31565e+09
+2024-07-28 19:14:51,0.000228808,updating pe:oe real =2:2, current phi: new phi  =6.20177e+09:5.84186e+09
+2024-07-28 19:14:51,0.000195893,updating pe:oe real =3:3, current phi: new phi  =6.10584e+09:5.99049e+09
+2024-07-28 19:14:51,0.000219787,updating pe:oe real =4:4, current phi: new phi  =6.77541e+09:6.28847e+09
+2024-07-28 19:14:51,0.000188679,updating pe:oe real =5:5, current phi: new phi  =5.92727e+09:5.54677e+09
+2024-07-28 19:14:51,0.000217445,updating pe:oe real =6:6, current phi: new phi  =6.60372e+09:6.69564e+09
+2024-07-28 19:14:51,0.000190271,updating pe:oe real =7:7, current phi: new phi  =5.35772e+09:5.1808e+09
+2024-07-28 19:14:51,0.000220067,updating pe:oe real =8:8, current phi: new phi  =6.46363e+09:5.49685e+09
+2024-07-28 19:14:51,0.000191584,updating pe:oe real =9:9, current phi: new phi  =6.91243e+09:6.4087e+09
+2024-07-28 19:14:51,0.00021251,updating pe:oe real =10:10, current phi: new phi  =6.40015e+09:5.90032e+09
+2024-07-28 19:14:51,0.000191976,updating pe:oe real =11:11, current phi: new phi  =6.1398e+09:6.04838e+09
+2024-07-28 19:14:51,0.000214595,updating pe:oe real =12:12, current phi: new phi  =5.52207e+09:5.48155e+09
+2024-07-28 19:14:51,0.000189141,updating pe:oe real =13:13, current phi: new phi  =6.61154e+09:5.59437e+09
+2024-07-28 19:14:51,0.000214506,updating pe:oe real =14:14, current phi: new phi  =6.42006e+09:6.32453e+09
+2024-07-28 19:14:51,0.000194921,updating pe:oe real =15:15, current phi: new phi  =6.61697e+09:5.93749e+09
+2024-07-28 19:14:51,0.000223131,updating pe:oe real =17:17, current phi: new phi  =7.72875e+09:6.84827e+09
+2024-07-28 19:14:51,0.000189019,updating pe:oe real =18:18, current phi: new phi  =7.73088e+09:6.87361e+09
+2024-07-28 19:14:51,0.000219139,updating pe:oe real =19:19, current phi: new phi  =6.43979e+09:6.18168e+09
+2024-07-28 19:14:51,0.000196405,updating pe:oe real =20:20, current phi: new phi  =6.58245e+09:6.25134e+09
+2024-07-28 19:14:51,0.00025503,updating pe:oe real =22:22, current phi: new phi  =8.2005e+09:7.20262e+09
+2024-07-28 19:14:51,0.000215618,updating pe:oe real =23:23, current phi: new phi  =6.73733e+09:6.45513e+09
+2024-07-28 19:14:51,0.000224464,updating pe:oe real =24:24, current phi: new phi  =5.89111e+09:5.78334e+09
+2024-07-28 19:14:51,0.000188084,updating pe:oe real =25:25, current phi: new phi  =6.91712e+09:6.54053e+09
+2024-07-28 19:14:51,0.000214552,updating pe:oe real =26:26, current phi: new phi  =5.57688e+09:5.44342e+09
+2024-07-28 19:14:51,0.000196835,updating pe:oe real =27:27, current phi: new phi  =6.46853e+09:6.0387e+09
+2024-07-28 19:14:51,0.000220416,updating pe:oe real =28:28, current phi: new phi  =6.41043e+09:6.21736e+09
+2024-07-28 19:14:51,0.000187577,updating pe:oe real =29:29, current phi: new phi  =5.8864e+09:5.72564e+09
+2024-07-28 19:14:51,0.000210775,updating pe:oe real =30:30, current phi: new phi  =6.54457e+09:6.20775e+09
+2024-07-28 19:14:51,0.000186099,updating pe:oe real =31:31, current phi: new phi  =6.49885e+09:5.73541e+09
+2024-07-28 19:14:51,0.000214403,updating pe:oe real =32:32, current phi: new phi  =6.58884e+09:5.67994e+09
+2024-07-28 19:14:51,0.000172464,updating pe:oe real =33:33, current phi: new phi  =6.19629e+09:5.73053e+09
+2024-07-28 19:14:51,0.000210154,updating pe:oe real =34:34, current phi: new phi  =6.25311e+09:5.76333e+09
+2024-07-28 19:14:51,0.00018812,updating pe:oe real =35:35, current phi: new phi  =5.97764e+09:5.80227e+09
+2024-07-28 19:14:51,0.000211134,updating pe:oe real =37:37, current phi: new phi  =7.2011e+09:5.93329e+09
+2024-07-28 19:14:51,0.000252002,updating pe:oe real =40:40, current phi: new phi  =6.2065e+09:5.83089e+09
+2024-07-28 19:14:51,0.00020867,updating pe:oe real =41:41, current phi: new phi  =7.06905e+09:6.32794e+09
+2024-07-28 19:14:51,0.000226473,updating pe:oe real =42:42, current phi: new phi  =6.32741e+09:5.78677e+09
+2024-07-28 19:14:51,0.000208503,updating pe:oe real =43:43, current phi: new phi  =5.84794e+09:6.01729e+09
+2024-07-28 19:14:51,0.000221864,updating pe:oe real =45:45, current phi: new phi  =6.50243e+09:6.04431e+09
+2024-07-28 19:14:51,0.000202714,updating pe:oe real =46:46, current phi: new phi  =6.68631e+09:6.73932e+09
+2024-07-28 19:14:51,0.000229828,updating pe:oe real =47:47, current phi: new phi  =5.91132e+09:5.81959e+09
+2024-07-28 19:14:51,0.000196971,updating pe:oe real =48:48, current phi: new phi  =6.42848e+09:6.09107e+09
+2024-07-28 19:14:51,0.000218936,updating pe:oe real =49:49, current phi: new phi  =6.42088e+09:6.22439e+09
+2024-07-28 19:14:51,0.0002161,updating pe:oe real =50:50, current phi: new phi  =6.82588e+09:5.94064e+09
+2024-07-28 19:14:51,0.000230292,updating pe:oe real =51:51, current phi: new phi  =6.53299e+09:5.95372e+09
+2024-07-28 19:14:51,0.000202235,updating pe:oe real =52:52, current phi: new phi  =6.60355e+09:6.20751e+09
+2024-07-28 19:14:51,0.000223189,updating pe:oe real =53:53, current phi: new phi  =1.39408e+10:6.1041e+09
+2024-07-28 19:14:51,0.000194416,updating pe:oe real =54:54, current phi: new phi  =6.86784e+09:6.35052e+09
+2024-07-28 19:14:51,0.000215948,updating pe:oe real =55:55, current phi: new phi  =7.08533e+09:6.75292e+09
+2024-07-28 19:14:51,0.000193172,updating pe:oe real =56:56, current phi: new phi  =5.9714e+09:5.92642e+09
+2024-07-28 19:14:51,0.000222613,updating pe:oe real =57:57, current phi: new phi  =6.31245e+09:6.22203e+09
+2024-07-28 19:14:51,0.000185379,updating pe:oe real =58:58, current phi: new phi  =6.26688e+09:5.77082e+09
+2024-07-28 19:14:51,0.000226629,updating pe:oe real =59:59, current phi: new phi  =6.77074e+09:6.4853e+09
+2024-07-28 19:14:51,0.000190462,updating pe:oe real =60:60, current phi: new phi  =7.17573e+09:6.60247e+09
+2024-07-28 19:14:51,0.000223175,updating pe:oe real =61:61, current phi: new phi  =5.73787e+09:5.59643e+09
+2024-07-28 19:14:51,0.000192735,updating pe:oe real =62:62, current phi: new phi  =6.41487e+09:6.01263e+09
+2024-07-28 19:14:51,0.000220645,updating pe:oe real =63:63, current phi: new phi  =5.58872e+09:5.46206e+09
+2024-07-28 19:14:51,0.000190683,updating pe:oe real =64:64, current phi: new phi  =6.08437e+09:5.97681e+09
+2024-07-28 19:14:51,0.000226911,updating pe:oe real =67:67, current phi: new phi  =7.11848e+09:6.69009e+09
+2024-07-28 19:14:51,0.000259904,updating pe:oe real =69:69, current phi: new phi  =6.94403e+09:6.46045e+09
+2024-07-28 19:14:51,0.000219723,updating pe:oe real =70:70, current phi: new phi  =6.84249e+09:6.61179e+09
+2024-07-28 19:14:51,0.000231024,updating pe:oe real =71:71, current phi: new phi  =5.37817e+09:5.27842e+09
+2024-07-28 19:14:51,0.000199377,updating pe:oe real =72:72, current phi: new phi  =6.38321e+09:5.8006e+09
+2024-07-28 19:14:51,0.000228617,updating pe:oe real =73:73, current phi: new phi  =6.24515e+09:6.12377e+09
+2024-07-28 19:14:51,0.000197714,updating pe:oe real =74:74, current phi: new phi  =6.9337e+09:6.2008e+09
+2024-07-28 19:14:51,0.000222537,updating pe:oe real =76:76, current phi: new phi  =7.16217e+09:6.81257e+09
+2024-07-28 19:14:51,0.000223061,updating pe:oe real =77:77, current phi: new phi  =6.17376e+09:5.93672e+09
+2024-07-28 19:14:51,0.000232412,updating pe:oe real =78:78, current phi: new phi  =7.02896e+09:6.8871e+09
+2024-07-28 19:14:51,0.000208127,updating pe:oe real =79:79, current phi: new phi  =6.05637e+09:5.76765e+09
+2024-07-28 19:14:51,0.000223121,updating pe:oe real =80:80, current phi: new phi  =6.1445e+09:5.70431e+09
+2024-07-28 19:14:51,0.000198635,updating pe:oe real =81:81, current phi: new phi  =7.38452e+09:6.38405e+09
+2024-07-28 19:14:51,0.00022141,updating pe:oe real =82:82, current phi: new phi  =6.56117e+09:6.62343e+09
+2024-07-28 19:14:51,0.000192784,updating pe:oe real =83:83, current phi: new phi  =6.1053e+09:5.74882e+09
+2024-07-28 19:14:51,0.0002195,updating pe:oe real =84:84, current phi: new phi  =5.88282e+09:5.7073e+09
+2024-07-28 19:14:51,0.000198109,updating pe:oe real =85:85, current phi: new phi  =6.74659e+09:6.40461e+09
+2024-07-28 19:14:51,0.000224621,updating pe:oe real =88:88, current phi: new phi  =7.19266e+09:6.55967e+09
+2024-07-28 19:14:51,0.000304964,updating pe:oe real =89:89, current phi: new phi  =6.22299e+09:6.07236e+09
+2024-07-28 19:14:51,0.000252415,updating pe:oe real =91:91, current phi: new phi  =6.69365e+09:5.91775e+09
+2024-07-28 19:14:51,0.000187752,updating pe:oe real =92:92, current phi: new phi  =6.75877e+09:6.40644e+09
+2024-07-28 19:14:51,0.000226837,updating pe:oe real =93:93, current phi: new phi  =7.9312e+09:5.89578e+09
+2024-07-28 19:14:51,0.000189611,updating pe:oe real =94:94, current phi: new phi  =6.66985e+09:6.13225e+09
+2024-07-28 19:14:51,0.000226697,updating pe:oe real =95:95, current phi: new phi  =6.53888e+09:6.27203e+09
+2024-07-28 19:14:51,0.000193005,updating pe:oe real =96:96, current phi: new phi  =6.73465e+09:6.31685e+09
+2024-07-28 19:14:51,0.000214995,updating pe:oe real =97:97, current phi: new phi  =6.90442e+09:6.62938e+09
+2024-07-28 19:14:51,0.000191315,updating pe:oe real =98:98, current phi: new phi  =5.82166e+09:5.48548e+09
+2024-07-28 19:14:51,0.000221502,updating pe:oe real =99:99, current phi: new phi  =5.78258e+09:5.56453e+09
+2024-07-28 19:14:51,0.000202992,updating pe:oe real =100:100, current phi: new phi  =5.75486e+09:5.46466e+09
+2024-07-28 19:14:51,0.000221153,updating pe:oe real =101:101, current phi: new phi  =6.14011e+09:6.02419e+09
+2024-07-28 19:14:51,0.000203746,updating pe:oe real =103:103, current phi: new phi  =6.48877e+09:6.01578e+09
+2024-07-28 19:14:51,0.000251921,updating pe:oe real =104:104, current phi: new phi  =6.18502e+09:5.83483e+09
+2024-07-28 19:14:51,0.000207884,updating pe:oe real =105:105, current phi: new phi  =6.18272e+09:5.96344e+09
+2024-07-28 19:14:51,0.000231742,updating pe:oe real =106:106, current phi: new phi  =6.08967e+09:5.82248e+09
+2024-07-28 19:14:51,0.000201597,updating pe:oe real =107:107, current phi: new phi  =6.7109e+09:6.34707e+09
+2024-07-28 19:14:51,0.000230556,updating pe:oe real =108:108, current phi: new phi  =6.19263e+09:5.76019e+09
+2024-07-28 19:14:51,0.000208692,updating pe:oe real =109:109, current phi: new phi  =6.15463e+09:5.70568e+09
+2024-07-28 19:14:51,0.000240723,updating pe:oe real =110:110, current phi: new phi  =6.50086e+09:6.2373e+09
+2024-07-28 19:14:51,0.000203263,updating pe:oe real =111:111, current phi: new phi  =7.13374e+09:6.76316e+09
+2024-07-28 19:14:51,0.000220065,updating pe:oe real =112:112, current phi: new phi  =7.12459e+09:6.57935e+09
+2024-07-28 19:14:51,0.000195954,updating pe:oe real =113:113, current phi: new phi  =6.51335e+09:5.92516e+09
+2024-07-28 19:14:51,0.000222027,updating pe:oe real =114:114, current phi: new phi  =6.05584e+09:5.83511e+09
+2024-07-28 19:14:51,0.000198946,updating pe:oe real =115:115, current phi: new phi  =5.69877e+09:5.51834e+09
+2024-07-28 19:14:51,0.000224484,updating pe:oe real =117:117, current phi: new phi  =6.34386e+09:6.01862e+09
+2024-07-28 19:14:51,0.000205315,updating pe:oe real =118:118, current phi: new phi  =5.96682e+09:5.56378e+09
+2024-07-28 19:14:51,0.00023202,updating pe:oe real =119:119, current phi: new phi  =6.48418e+09:5.8698e+09
+2024-07-28 19:14:51,0.000199689,updating pe:oe real =121:121, current phi: new phi  =6.17967e+09:5.97469e+09
+2024-07-28 19:14:51,0.000253968,updating pe:oe real =122:122, current phi: new phi  =8.40862e+09:5.85944e+09
+2024-07-28 19:14:51,0.000212761,updating pe:oe real =123:123, current phi: new phi  =6.33379e+09:5.90519e+09
+2024-07-28 19:14:51,0.000225335,updating pe:oe real =124:124, current phi: new phi  =6.78269e+09:6.38683e+09
+2024-07-28 19:14:51,0.000198111,updating pe:oe real =125:125, current phi: new phi  =5.80271e+09:5.65321e+09
+2024-07-28 19:14:51,0.000226423,updating pe:oe real =126:126, current phi: new phi  =6.01608e+09:5.85102e+09
+2024-07-28 19:14:51,0.000200502,updating pe:oe real =127:127, current phi: new phi  =7.23453e+09:6.88733e+09
+2024-07-28 19:14:51,0.000276317,updating pe:oe real =128:128, current phi: new phi  =5.33001e+09:5.24706e+09
+2024-07-28 19:14:51,0.000340804,updating pe:oe real =129:129, current phi: new phi  =6.42949e+09:5.94507e+09
+2024-07-28 19:14:51,0.00028844,updating pe:oe real =130:130, current phi: new phi  =6.13529e+09:5.9442e+09
+2024-07-28 19:14:51,0.00027946,updating pe:oe real =131:131, current phi: new phi  =5.61797e+09:5.56632e+09
+2024-07-28 19:14:51,0.000283732,updating pe:oe real =132:132, current phi: new phi  =5.27433e+09:5.13254e+09
+2024-07-28 19:14:51,0.000251074,updating pe:oe real =133:133, current phi: new phi  =6.30042e+09:6.11003e+09
+2024-07-28 19:14:51,0.000284959,updating pe:oe real =134:134, current phi: new phi  =6.4306e+09:6.09155e+09
+2024-07-28 19:14:51,0.000265891,updating pe:oe real =135:135, current phi: new phi  =6.6345e+09:6.2358e+09
+2024-07-28 19:14:51,0.000274526,updating pe:oe real =136:136, current phi: new phi  =5.79342e+09:5.82158e+09
+2024-07-28 19:14:51,0.00026099,updating pe:oe real =137:137, current phi: new phi  =6.17546e+09:6.00492e+09
+2024-07-28 19:14:51,0.000278388,updating pe:oe real =138:138, current phi: new phi  =6.41671e+09:6.18849e+09
+2024-07-28 19:14:51,0.000251362,updating pe:oe real =139:139, current phi: new phi  =8.66014e+09:6.74763e+09
+2024-07-28 19:14:51,0.000277641,updating pe:oe real =140:140, current phi: new phi  =6.95657e+09:6.68803e+09
+2024-07-28 19:14:51,0.000262377,updating pe:oe real =141:141, current phi: new phi  =6.2514e+09:6.00746e+09
+2024-07-28 19:14:51,0.000268498,updating pe:oe real =142:142, current phi: new phi  =5.41674e+09:5.31336e+09
+2024-07-28 19:14:51,0.000248678,updating pe:oe real =143:143, current phi: new phi  =8.45158e+09:8.00345e+09
+2024-07-28 19:14:51,0.000273834,updating pe:oe real =144:144, current phi: new phi  =7.64597e+11:6.7802e+09
+2024-07-28 19:14:51,0.000239903,updating pe:oe real =145:145, current phi: new phi  =6.68124e+09:6.51287e+09
+2024-07-28 19:14:51,0.000236537,updating pe:oe real =146:146, current phi: new phi  =5.66322e+09:5.44073e+09
+2024-07-28 19:14:51,0.000223238,updating pe:oe real =147:147, current phi: new phi  =6.18378e+09:5.69406e+09
+2024-07-28 19:14:51,0.000253303,updating pe:oe real =148:148, current phi: new phi  =6.90457e+09:6.34583e+09
+2024-07-28 19:14:51,0.0864591,current best mean phi (after updating reduced-phi reals):  6.06821e+09
+2024-07-28 19:14:51,4.4099e-05,updating lambda to  4.21875e+07
+2024-07-28 19:14:57,5.39152,phi-based termination criteria check
+2024-07-28 19:14:57,3.4381e-05,phiredstp:  0.01
+2024-07-28 19:14:57,2.7122e-05,nphistp:  3
+2024-07-28 19:14:57,1.7973e-05,nphinored (also used for consecutive bad lambda cycles):  3
+2024-07-28 19:14:57,2.3623e-05,best mean phi sequence: 
+2024-07-28 19:14:57,2.5738e-05,best phi yet:  6.06821e+09
+2024-07-28 19:14:57,1.8533e-05,number of consecutive bad lambda testing cycles:  0
+2024-07-28 19:14:57,1.8808e-05,number of iterations satisfying phiredstp criteria:  1
+2024-07-28 19:14:57,2.2769e-05,number of iterations since best yet mean phi:  0
